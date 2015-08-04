@@ -1,40 +1,49 @@
 {
-    "name"        : "lotto-bot-verify",
-    "description" : "proof of solvency for LottoBot",
-    "license"     : "Apache-2.0",
-    "homepage"    : "https://github.com/daxxog/lotto-bot-verify",
-    "main"        : "lotto-bot-verify.min.js",
-    "version"     : "0.0.1",
-    "engines": {
-        "node" : ">=0.10.33"
-    },
-    "maintainers": [{
-        "name"  : "David Volm",
-        "email" : "david@volminator.com",
-        "web"   : "http://daxxog.com/"
-    }],
-    "repository": {
-        "type" : "git",
-        "url"  : "https://github.com/daxxog/lotto-bot-verify.git"
-    },
-    "devDependencies": {
-        "bitfactory": "*",
-        "stoptime": "*",
-        "uglify-js": "*",
-        "vows": "*"
-    },
-    "scripts": {
-        "build": "node make.js",
-        "test": "vows test/*",
-        "start": "node cli.js",
-        "prepublish": "npm run build"
-    },
-    "files": [
-        "cli.min.js",
-        "lotto-bot-verify.min.js",
-        "bin/lotto-bot-verify"
-    ],
-    "bin": {
-        "lotto-bot-verify" : "bin/lotto-bot-verify"
+  "name": "lotto-bot-verify",
+  "description": "proof of solvency for LottoBot",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/daxxog/lotto-bot-verify",
+  "main": "lotto-bot-verify.min.js",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.10.33"
+  },
+  "maintainers": [
+    {
+      "name": "David Volm",
+      "email": "david@volminator.com",
+      "web": "http://daxxog.com/"
     }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daxxog/lotto-bot-verify.git"
+  },
+  "devDependencies": {
+    "bitfactory": "*",
+    "stoptime": "*",
+    "uglify-js": "*",
+    "vows": "*"
+  },
+  "scripts": {
+    "build": "node make.js",
+    "test": "vows test/*",
+    "start": "node cli.js",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "cli.min.js",
+    "lotto-bot-verify.min.js",
+    "bin/lotto-bot-verify"
+  ],
+  "bin": {
+    "lotto-bot-verify": "bin/lotto-bot-verify"
+  },
+  "dependencies": {
+    "bitcore": "^0.12.14",
+    "just-bot": "0.0.2",
+    "mongodb": "^2.0.39",
+    "string": "^3.3.0",
+    "yargs": "^3.17.1"
+  }
 }
